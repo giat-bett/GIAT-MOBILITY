@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giat Mobility - Affordable Clean Transport Solutions</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 <body class="light">
     <header class="header">
         <div class="container header-content">
             <a href="/" class="logo">
-                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/icon-RSGEFfkNo1wEvOh8ziOS5Ulm0yBkTF.png" alt="Giat Bikes Logo">
+                <img src="/assets/giat-mobility-1.png" alt="Giat Bikes Logo" class="logo-img">
                 <span>Giat Mobility</span>
             </a>
             <nav class="nav">
@@ -27,7 +31,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
                 </svg>
             </button>
-            <a href="#contact" class="button button-primary">Get Started</a>
+            <!-- <a href="#contact" class="button button-primary">Get Started</a> -->
         </div>
     </header>
 
@@ -54,7 +58,7 @@
                         <h3>Our Vision</h3>
                         <p>To create cheap, clean, and sustainable transport solutions that empower communities and foster economic growth in Africa.</p>
                     </div>
-                    <div class="about-text">
+                    <div class="about-text card">
                         <p>Giat Mobility operates Mobility Centers, offering shared mobility solutions and charging stations to provide cheaper, sustainable transport options across the region. Our commitment to innovation and sustainability drives us to develop solutions that make a real difference in people's lives.</p>
                     </div>
                 </div>
@@ -147,23 +151,35 @@
                     <p>Find a Giat Mobility center near you</p>
                 </div>
                 <div class="map-container">
-                    <div class="map" id="map"></div>
+                    <div class="map " id="map"></div>
                     <div class="card center-info">
-                        <h3>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                <circle cx="12" cy="10" r="3"></circle>
-                            </svg>
-                            Chebarus Mobility Center
-                        </h3>
-                        <p>Location: Chebarus, Kenya</p>
-                        <p>Status: Operational</p>
-                        <h4>Services:</h4>
-                        <ul>
-                            <li>Bike Leasing</li>
-                            <li>Charging Station</li>
-                            <li>Maintenance</li>
-                        </ul>
+                        <div>
+                            <h3>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                Chebarus Mobility Center
+                            </h3>
+                            <p>Location: Chebarus, Kenya</p>
+                            <p>Status: Operational</p>
+                            <h4>Services:</h4>
+                            <ul>
+                                <li>Bike Leasing</li>
+                                <li>Charging Station</li>
+                                <li>Maintenance</li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <!-- list of other sites -->
+                            <h4>Other Locations</h4>
+                            <ul>
+                                <li>Talai Stage Center</li>
+                                <!-- <li>Cheptiret Center</li> -->
+                            </ul>
+
+                            
+                        </div>
                     </div>
                 </div>
             </div>
@@ -296,7 +312,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <a href="/" class="logo">
-                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/icon-RSGEFfkNo1wEvOh8ziOS5Ulm0yBkTF.png" alt="Giat Bikes Logo">
+                        <img src="/assets/giat-mobility-1.png" alt="Giat Bikes Logo">
                         <span>Giat Mobility</span>
                     </a>
                     <p>Transforming transportation with innovative solutions for a connected and sustainable future in Africa.</p>
@@ -315,7 +331,7 @@
                     <ul class="footer-links">
                         <li>Chebarus Mobility Center</li>
                         <li>Chebarus, Kenya</li>
-                        <li>info@giatmobility.com</li>
+                        <li>info@giatmobility.co.ke</li>
                     </ul>
                 </div>
             </div>
@@ -347,7 +363,7 @@
 
         // Initialize Google Maps
         function initMap() {
-            const chebarusCenter = { lat: 0.5143, lng: 35.2713 };
+            const chebarusCenter = { lat: 0.290917, lng: 35.314333 };
             const map = new google.maps.Map(document.getElementById("map"), {
                 zoom: 13,
                 center: chebarusCenter,
@@ -376,13 +392,13 @@
                     title: "Chebarus Mobility Center"
                 },
                 {
-                    position: { lat: 0.5223, lng: 35.2833 },
+                    position: { lat: 0.290438, lng: 35.291360 },
                     title: "Talai Stage Center"
                 },
-                {
-                    position: { lat: 0.4983, lng: 35.2643 },
-                    title: "Cheptiret Center"
-                }
+                // {
+                //     position: { lat: 0.356408, lng: 35.356163 },
+                //     title: "Cheptiret Center"
+                // }
             ];
 
             centers.forEach(center => {

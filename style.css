@@ -82,6 +82,7 @@
   .logo img {
     height: 2.5rem;
     width: auto;
+    border-radius: 10px;
   }
   
   .nav {
@@ -129,6 +130,7 @@
   
   .light .sun-icon {
     display: none;
+    align-items: center;
   }
   
   /* Hero Section */
@@ -221,6 +223,9 @@
     border: 1px solid var(--border);
     border-radius: var(--radius);
     padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
   
   .center-info h3 {
@@ -263,6 +268,26 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+  }
+
+  .about{
+    margin-top: 20px;
+  }
+
+  .about-content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .vision-card{
+    margin-bottom: 20px;
+  }
+
+  .highlights-grid{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
   
   .card {
